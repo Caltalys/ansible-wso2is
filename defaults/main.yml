@@ -56,38 +56,38 @@ master_datasources:
     description: The datasource used for gov registry
     url: jdbc:oracle:thin:@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
     username: WSOGR_OWNER
-    password: GOp22qpS
+    password: WSOGR_OWNER
     jndi_config: jdbc/INTER_GREG_LST
   - wso2_user_db:
     name: INTER_USER_LST
     description: The datasource is used for user mangement and userstore
     url: jdbc:oracle:thin:@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
     username: WSO2_USER
-    password:  uzk13VNC
+    password:  WSO2_USER
     jndi_config: jdbc/INTER_USER_LST
   - wso2_id_db:
     name: INTER_ID_LST
     description: The datasource is used for user mangement and userstore
     url: jdbc:oracle:thin:@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
     username: WSOID_USER
-    password:  *****
+    password: '*****'
     jndi_config: jdbc/INTER_ID_LST
   - wso2_um_db:
     name: INTER_UM_LST
     description: The datasource is used for user mangement and userstore
     url: jdbc:oracle:thin:@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
     username: WSO2_USER
-    password:  *****
+    password: '*****'
     jndi_config: jdbc/INTER_USER_LST
 
 
 
-registry_mount_db: WSOGR_OWNER@jdbc:oracle:thin:WSOGR_OWNER/GOp22qpS@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
+registry_mount_db: WSOGR_OWNER@jdbc:oracle:thin:WSOGR_OWNER/WSOGR_OWNER@vmorades11.cfv.junta-andalucia.es:1541/ORADES11
 
 registry_mounts:
   - wso2_config_db:
     path: /_system/config
-    target_path: /_system/config/esbnodes
+    target_path: /_system/config/isnodes
     read_only: false
     registry_root: /
     enable_cache: true
